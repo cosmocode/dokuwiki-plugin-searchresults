@@ -1,0 +1,7 @@
+base   searchresults
+author Todd Augsburger
+email  todd@rollerorgans.com
+date   2007-08-30
+name   SearchResults Plugin
+desc   returns search results as bulleted list:\n{{search>the words}}
+url    https://www.dokuwiki.org/plugin:searchresults
