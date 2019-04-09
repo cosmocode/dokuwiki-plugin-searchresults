@@ -22,7 +22,7 @@ class syntax_plugin_searchresults extends DokuWiki_Syntax_Plugin
         $this->Lexer->addSpecialPattern("{{search>.*?}}", $mode, 'plugin_searchresults');
     }
 
-    function handle($match, $state, $pos, &$handler)
+    function handle($match, $state, $pos, Doku_Handler $handler)
     {
         if ($state == DOKU_LEXER_SPECIAL) {
             // strip / from start and / from end
@@ -56,7 +56,7 @@ class syntax_plugin_searchresults extends DokuWiki_Syntax_Plugin
         }
     }
 
-    function render($mode, &$renderer, $data)
+    function render($mode, Doku_Renderer $renderer, $data)
     {
         if ($mode == 'xhtml') {
             list($state, $match) = $data;
